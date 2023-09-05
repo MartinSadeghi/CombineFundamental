@@ -12,6 +12,10 @@ struct CombineFundamentalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    run()
+                }
+                
         }
     }
 }
