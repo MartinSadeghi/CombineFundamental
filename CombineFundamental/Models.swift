@@ -19,3 +19,15 @@ struct Movie: Equatable, Codable, Identifiable {
         }
     }
 }
+
+
+struct MovieResponse: Codable {
+    let results: [Movie]
+}
+
+
+let jsonDecoder: JSONDecoder = {
+    let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    return decoder
+}()
