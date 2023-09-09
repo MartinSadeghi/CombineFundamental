@@ -15,6 +15,7 @@
 		6B0AF5852AA9E30E00BB723D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AF5842AA9E30E00BB723D /* Network.swift */; };
 		6B0AF5872AA9E31E00BB723D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AF5862AA9E31E00BB723D /* Models.swift */; };
 		6B0AF5892AAB25EA00BB723D /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AF5882AAB25EA00BB723D /* MovieViewModel.swift */; };
+		6B0AF58B2AAB2A2800BB723D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AF58A2AAB2A2800BB723D /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		6B0AF5842AA9E30E00BB723D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		6B0AF5862AA9E31E00BB723D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		6B0AF5882AAB25EA00BB723D /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		6B0AF58A2AAB2A2800BB723D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				6B0AF5742AA73C8900BB723D /* CombineFundamentalApp.swift */,
 				6B0AF5762AA73C8900BB723D /* MoviesView.swift */,
 				6B0AF5882AAB25EA00BB723D /* MovieViewModel.swift */,
+				6B0AF58A2AAB2A2800BB723D /* Constant.swift */,
 				6B0AF5842AA9E30E00BB723D /* Network.swift */,
 				6B0AF5862AA9E31E00BB723D /* Models.swift */,
 				6B0AF5822AA73CE100BB723D /* Code.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0AF58B2AAB2A2800BB723D /* Constant.swift in Sources */,
 				6B0AF5772AA73C8900BB723D /* MoviesView.swift in Sources */,
 				6B0AF5832AA73CE100BB723D /* Code.swift in Sources */,
 				6B0AF5852AA9E30E00BB723D /* Network.swift in Sources */,
