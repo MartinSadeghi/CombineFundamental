@@ -9,7 +9,7 @@ import Foundation
 
 enum Constant {
     
-    static var apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNjBlZjA2NTZjNTBmMTExNzdjNDA4ZWFjNGI0NGY5YiIsInN1YiI6IjY0ZjliMDBmYThiMmNhNGYxYmM5MDk3MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gsMaZGruPY7MSFpoNCfgyQUNIoQiCaS20n0_1ghGyjo"
+    static var apiKey = "b60ef0656c50f11177c408eac4b44f9b"
     
     
     

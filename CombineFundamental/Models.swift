@@ -21,7 +21,8 @@ struct Movie: Equatable, Codable, Identifiable {
 }
 
 
-struct MovieResponse: Codable {
+
+struct MovieResponse: Decodable {
     let results: [Movie]
 }
 

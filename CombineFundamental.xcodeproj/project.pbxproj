@@ -64,10 +64,10 @@
 				6B0AF5742AA73C8900BB723D /* CombineFundamentalApp.swift */,
 				6B0AF5762AA73C8900BB723D /* MoviesView.swift */,
 				6B0AF5882AAB25EA00BB723D /* MovieViewModel.swift */,
-				6B0AF58A2AAB2A2800BB723D /* Constant.swift */,
 				6B0AF5842AA9E30E00BB723D /* Network.swift */,
 				6B0AF5862AA9E31E00BB723D /* Models.swift */,
 				6B0AF5822AA73CE100BB723D /* Code.swift */,
+				6B0AF58A2AAB2A2800BB723D /* Constant.swift */,
 				6B0AF5782AA73C8A00BB723D /* Assets.xcassets */,
 				6B0AF57A2AA73C8A00BB723D /* Preview Content */,
 			);
