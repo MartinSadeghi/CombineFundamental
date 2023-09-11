@@ -17,15 +17,22 @@ final class MovieViewModel: ObservableObject {
         fetchMovies()
             .map(\.results)
             .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .finished:()
-                case .failure(let err):
-                    print(err.localizedDescription)
-                }
-            } receiveValue: { [weak self] movies in
-                self?.movies = movies
-            }
-            .store(in: &cancellables)
+        
+//        first way
+            .replaceError(with: [])
+            .assign(to: &$movies)
+        
+        
+//        second way
+//            .sink { completion in
+//                switch completion {
+//                case .finished:()
+//                case .failure(let err):
+//                    print(err.localizedDescription)
+//                }
+//            } receiveValue: { [weak self] movies in
+//                self?.movies = movies
+//            }
+//            .store(in: &cancellables)
     }
 }

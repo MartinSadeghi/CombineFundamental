@@ -17,6 +17,10 @@ func fetchMovies() -> some Publisher<MovieResponse, Error> {
 //        .map { $0.data}
         .map(\.data)
         .decode(type: MovieResponse.self, decoder: jsonDecoder)
+//        .tryMap { data in
+//            let decoded = try jsonDecoder.decode(MovieResponse.self, from: data)
+//            return decoded
+//        }
 //        .eraseToAnyPublisher()
 }
 
