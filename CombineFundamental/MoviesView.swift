@@ -30,6 +30,7 @@ struct MoviesView: View {
                 }
             }
         }
+        .searchable(text: $movieViewModel.searchQuery)
         .onAppear {
             movieViewModel.fetchInitialData()
         }

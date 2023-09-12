@@ -10,8 +10,9 @@ import Combine
 
 final class MovieViewModel: ObservableObject {
     
-    @Published var movies: [Movie] = []
     var cancellables = Set<AnyCancellable>()
+    @Published var movies: [Movie] = []
+    @Published var searchQuery: String = ""
     
     func fetchInitialData() {
         fetchMovies()

@@ -11,11 +11,9 @@ import SwiftUI
 struct CombineFundamentalApp: App {
     var body: some Scene {
         WindowGroup {
-            MoviesView()
-                .onAppear {
-                    run()
-                }
-                
+            NavigationView {
+                MoviesView()
+            }
         }
     }
 }
