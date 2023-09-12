@@ -11,8 +11,31 @@ import Combine
 final class MovieViewModel: ObservableObject {
     
     var cancellables = Set<AnyCancellable>()
-    @Published var movies: [Movie] = []
+    @Published private var upcomingMovies: [Movie] = []
     @Published var searchQuery: String = ""
+    @Published private var searchResults: [Movie] = []
+    
+    var movies: [Movie] {
+        if searchQuery.isEmpty {
+            return upcomingMovies
+        } else {
+            return searchResults
+        }
+    }
+    
+    
+    init() {
+        $searchQuery
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .map { searchQuery in
+                searchMovies(for: searchQuery)
+                    .replaceError(with: MovieResponse(results: []))
+            }
+            .switchToLatest()
+            .map(\.results)
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$searchResults)
+    }
     
     func fetchInitialData() {
         fetchMovies()
@@ -21,7 +44,7 @@ final class MovieViewModel: ObservableObject {
         
 //        first way
             .replaceError(with: [])
-            .assign(to: &$movies)
+            .assign(to: &$upcomingMovies)
         
         
 //        second way

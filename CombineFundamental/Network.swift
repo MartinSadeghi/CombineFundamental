@@ -24,3 +24,13 @@ func fetchMovies() -> some Publisher<MovieResponse, Error> {
 //        .eraseToAnyPublisher()
 }
 
+
+func searchMovies(for query: String) -> some Publisher<MovieResponse, Error> {
+    let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(Constant.apiKey)&query=\(encodedQuery!)")!
+    return URLSession
+        .shared
+        .dataTaskPublisher(for: url)
+        .map{ $0.data }
+        .decode(type: MovieResponse.self, decoder: jsonDecoder)
+}

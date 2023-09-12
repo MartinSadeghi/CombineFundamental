@@ -30,6 +30,7 @@ struct MoviesView: View {
                 }
             }
         }
+        .navigationTitle("Upcoming movies")
         .searchable(text: $movieViewModel.searchQuery)
         .onAppear {
             movieViewModel.fetchInitialData()
