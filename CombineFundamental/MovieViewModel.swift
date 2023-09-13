@@ -25,16 +25,7 @@ final class MovieViewModel: ObservableObject {
     
     
     init() {
-        $searchQuery
-            .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .map { searchQuery in
-                searchMovies(for: searchQuery)
-                    .replaceError(with: MovieResponse(results: []))
-            }
-            .switchToLatest()
-            .map(\.results)
-            .receive(on: DispatchQueue.main)
-            .assign(to: &$searchResults)
+        searchMovie()
     }
     
     func fetchInitialData() {
@@ -58,5 +49,18 @@ final class MovieViewModel: ObservableObject {
 //                self?.movies = movies
 //            }
 //            .store(in: &cancellables)
+    }
+    
+    func searchMovie() {
+        $searchQuery
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .map { searchQuery in
+                searchMovies(for: searchQuery)
+                    .replaceError(with: MovieResponse(results: []))
+            }
+            .switchToLatest()
+            .map(\.results)
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$searchResults)
     }
 }
